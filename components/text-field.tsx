@@ -17,7 +17,6 @@ export function TextField({
   ...props
 }: TextFieldProps) {
 
-
   const textInputClasses = clsx(
     'px-[12px] py-[10px] border border-neutral-400 rounded-[8px] placeholder:text-neutral-400',
     { 'border-red-600 bg-red-50': isError },
