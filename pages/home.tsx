@@ -10,7 +10,7 @@ import { TextField } from 'components/text-field'
 function HomeTopBar(){
   return (
     <TopBar
-      backButton={true}
+      drawerButton={true}
       actions={[
         <IconButton key={key()} onPress={() => {}}>
           <Ionicons name="bluetooth-sharp" size={20} color="#333333" />
@@ -43,9 +43,8 @@ export function HomePage() {
         </Text>
 
         <Button
-          leftIcon={
-            <Ionicons name="bag-handle" size={16} color="white" />
-          }> Hello world! </Button>
+          leftIcon={ <Ionicons name="bag-handle" size={16} color="white" /> }> Hello world!
+        </Button>
 
         <TextField isError label="Label" placeholder="Placeholder" />
         <TextField label="Label" placeholder="Placeholder" />
