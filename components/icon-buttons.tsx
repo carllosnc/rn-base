@@ -10,6 +10,7 @@ interface IconButtonProps extends TouchableOpacityProps {
 export function IconButton({ className, children, ...props }: IconButtonProps){
   return  (
     <TouchableOpacity
+      activeOpacity={0.7}
       className={clsx("flex h-[34px] w-[34px] items-center justify-center rounded-full", className)}
       {...props}
     >
