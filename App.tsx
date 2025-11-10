@@ -1,13 +1,23 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
+import './global.css'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { createStaticNavigation } from '@react-navigation/native'
+import { HomePage } from 'pages/home'
 
-import './global.css';
+const RootStack = createNativeStackNavigator({
+  screenOptions: {
+    headerShown: false
+  },
+  screens: {
+    Home: {
+      screen: HomePage
+    },
+  },
+})
+
+const Navigation = createStaticNavigation(RootStack)
 
 export default function App() {
   return (
-    <>
-      <ScreenContent title="Home" path="App.tsx"></ScreenContent>
-      <StatusBar style="auto" />
-    </>
-  );
+    <Navigation />
+  )
 }
