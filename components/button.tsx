@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
-import { TouchableHighlight, TouchableHighlightProps, Text, ActivityIndicator, View } from "react-native";
+import { TouchableOpacityProps, Text, ActivityIndicator, View, TouchableOpacity } from "react-native";
 import { clsx } from 'clsx';
 
-interface ButtonProps extends TouchableHighlightProps {
+interface ButtonProps extends TouchableOpacityProps {
   leftIcon?: ReactNode
   rightIcon?: ReactNode
   children: ReactNode
@@ -13,7 +13,8 @@ interface ButtonProps extends TouchableHighlightProps {
 
 export function Button({ children, className, leftIcon, rightIcon, isLoading, disabled, ...props } : ButtonProps){
   return (
-    <TouchableHighlight
+    <TouchableOpacity
+      activeOpacity={0.7}
       style={{alignSelf: 'flex-start'}}
       onPress={() => {}}
       className={clsx("px-[20px] bg-primary flex justify-center items-center w-auto py-[9px] rounded-full text-primary-content", className)}
@@ -25,6 +26,6 @@ export function Button({ children, className, leftIcon, rightIcon, isLoading, di
         <Text className="text-white font-bold">{ children }</Text>
         { isLoading && <ActivityIndicator className="ml-[10px]" size="small" color="white" /> }
       </View>
-    </TouchableHighlight>
+    </TouchableOpacity>
   )
 }
