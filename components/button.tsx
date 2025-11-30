@@ -11,13 +11,21 @@ interface ButtonProps extends TouchableOpacityProps {
   disabled?: boolean
 }
 
-export function Button({ children, className, leftIcon, rightIcon, isLoading, disabled, ...props } : ButtonProps){
+export function Button({
+  children,
+  className,
+  leftIcon,
+  rightIcon,
+  isLoading,
+  disabled,
+  ...props
+} : ButtonProps){
   return (
     <TouchableOpacity
       activeOpacity={0.7}
       style={{alignSelf: 'flex-start'}}
       onPress={() => {}}
-      className={clsx("px-[20px] bg-primary flex justify-center items-center w-auto py-[9px] rounded-full text-primary-content", className)}
+      className={clsx("px-[20px] bg-blue-600 flex justify-center items-center w-auto py-[9px] rounded-full text-primary-content", className)}
       disabled={isLoading || disabled}
       {...props}
     >
