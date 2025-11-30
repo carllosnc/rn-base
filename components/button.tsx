@@ -20,12 +20,17 @@ export function Button({
   disabled,
   ...props
 } : ButtonProps){
+  const buttonStyle = clsx(
+    "px-[20px] bg-blue-600 flex justify-center items-center w-auto py-[9px] rounded-full text-primary-content",
+    className
+  )
+
   return (
     <TouchableOpacity
       activeOpacity={0.7}
       style={{alignSelf: 'flex-start'}}
       onPress={() => {}}
-      className={clsx("px-[20px] bg-blue-600 flex justify-center items-center w-auto py-[9px] rounded-full text-primary-content", className)}
+      className={buttonStyle}
       disabled={isLoading || disabled}
       {...props}
     >
