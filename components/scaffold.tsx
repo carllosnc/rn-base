@@ -1,37 +1,34 @@
-import { StatusBar } from "expo-status-bar";
-import { Fragment, ReactNode } from "react";
-import { ScrollView, KeyboardAvoidingView } from "react-native";
-import { SafeAreaProvider, SafeAreaView, SafeAreaViewProps } from "react-native-safe-area-context";
-import colors from '../settings/colors.json'
+import { StatusBar } from 'expo-status-bar';
+import { Fragment, ReactNode } from 'react';
+import { ScrollView, KeyboardAvoidingView } from 'react-native';
+import { SafeAreaProvider, SafeAreaView, SafeAreaViewProps } from 'react-native-safe-area-context';
 
 interface ScaffoldProps extends SafeAreaViewProps {
-  statusBarColor?: string,
-  statusBarStyle?: 'light' | 'dark' | 'auto' | 'inverted'
-  children: ReactNode
-  topBar: ReactNode
+  statusBarColor?: string;
+  statusBarStyle?: 'light' | 'dark' | 'auto' | 'inverted';
+  children: ReactNode;
+  topBar: ReactNode;
 }
 
 export function Scaffold({
-  statusBarColor = colors.base,
-  statusBarStyle = "dark",
+  statusBarColor,
+  statusBarStyle,
   topBar,
   children,
   ...props
-}: ScaffoldProps){
+}: ScaffoldProps) {
   return (
     <SafeAreaProvider>
-      <SafeAreaView {...props} >
+      <SafeAreaView {...props}>
         <KeyboardAvoidingView>
-            <StatusBar style={statusBarStyle} backgroundColor={statusBarColor} />
-            { topBar }
+          <StatusBar style={'auto'} backgroundColor={statusBarColor} />
+          {topBar}
 
-            <ScrollView>
-              <Fragment>
-                { children }
-              </Fragment>
-            </ScrollView>
+          <ScrollView>
+            <Fragment>{children}</Fragment>
+          </ScrollView>
         </KeyboardAvoidingView>
       </SafeAreaView>
     </SafeAreaProvider>
-  )
+  );
 }
