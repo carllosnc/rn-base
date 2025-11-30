@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import colors from './settings/colors.json'
 
 module.exports = {
   content: [
@@ -10,13 +9,7 @@ module.exports = {
 
   presets: [require('nativewind/preset')],
   theme: {
-    extend: {
-      colors: {
-        'primary': colors.primary,
-        'base': colors.base,
-        'primary-content': colors.primaryContent
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }
