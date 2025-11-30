@@ -7,8 +7,10 @@ interface PProps extends TextProps {
 }
 
 export function P({ children, className, ...props }: PProps){
+  const pStyle = clsx("text-black dark:text-neutral-400", className)
+
   return (
-    <Text className={clsx("text-black dark:text-neutral-400", className)} {...props}>
+    <Text className={pStyle} {...props}>
       {children}
     </Text>
   )
