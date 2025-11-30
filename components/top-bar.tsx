@@ -4,6 +4,7 @@ import { IconButton } from './icon-buttons';
 import { ReactNode } from 'react';
 import { clsx } from 'clsx';
 import { useNavigation } from '@react-navigation/native';
+import { useTheme } from 'hooks/color-theme-hook';
 
 type TopBarProps = {
   title: string
@@ -24,6 +25,7 @@ export function TopBar({
   backButton = false, actions,
   }: TopBarProps) {
   const navigation = useNavigation()
+  const { contentColor } = useTheme()
 
   function getTitle() {
     if (title.length > titleLimitChars) {
@@ -33,12 +35,12 @@ export function TopBar({
   }
 
   const titleClasses = clsx(
-    'truncate text-[16px] font-bold',
+    'truncate text-[16px] font-bold dark:text-white',
     titleClass
   );
 
   const topBarClasses = clsx(
-    `bg-base flex h-[60px] w-full flex-row items-center justify-between px-[12px] pl-[20px]`,
+    `bg-white dark:bg-neutral-800 flex h-[60px] w-full flex-row items-center justify-between px-[12px] pl-[20px]`,
     topBarClass
   )
 
@@ -51,13 +53,13 @@ export function TopBar({
             className='py-[5px]'
             activeOpacity={0.7}
             onPress={() => { (navigation as any).openDrawer() }}>
-            <Ionicons name="menu-outline" size={32} />
+            <Ionicons name="menu-outline" size={32} color={contentColor} />
           </TouchableOpacity>
         )}
 
         {backButton && (
           <IconButton>
-            <Ionicons name="chevron-back" size={18} />
+            <Ionicons name="chevron-back" size={18} color={contentColor} />
           </IconButton>
         )}
 
