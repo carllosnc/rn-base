@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 import { Scaffold } from '../components/scaffold'
 import { TopBar } from 'components/top-bar'
 import { IconButton } from 'components/icon-buttons'
