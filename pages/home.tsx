@@ -6,23 +6,27 @@ import { Ionicons } from '@expo/vector-icons'
 import { key } from 'utils/hash'
 import { Button } from 'components/button'
 import { TextField } from 'components/text-field'
+import { useTheme } from 'hooks/color-theme-hook'
+import { P } from 'components/text'
 
 function HomeTopBar(){
+  const { contentColor } = useTheme()
+
   return (
     <TopBar
       drawerButton={true}
       actions={[
         <IconButton key={key()} onPress={() => {}}>
-          <Ionicons name="bluetooth-sharp" size={20} color="#333333" />
+          <Ionicons name="bluetooth-sharp" size={20} color={contentColor} />
         </IconButton>,
         <IconButton key={key()} onPress={() => {}}>
-          <Ionicons name="airplane" size={20} color="#333333" />
+          <Ionicons name="airplane" size={20} color={contentColor} />
         </IconButton>,
         <IconButton key={key()} onPress={() => {}}>
-          <Ionicons name="american-football" size={20} color="#333333" />
+          <Ionicons name="american-football" size={20} color={contentColor} />
         </IconButton>,
         <IconButton key={key()} onPress={() => {}}>
-          <Ionicons name="bag-handle" size={20} color="#333333" />
+          <Ionicons name="bag-handle" size={20} color={contentColor} />
         </IconButton>,
       ]}
       titleLimitChars={20}
@@ -35,12 +39,12 @@ export function HomePage() {
   return (
     <Scaffold
       topBar={<HomeTopBar/>}
-      className="bg-base w-full h-full"
+      className="bg-white dark:bg-neutral-800 w-full h-full"
       >
       <View className="gap-[30px] p-[20px] pb-[80px]">
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque culpa cumque cupiditate! Ut neque ratione adipisci dolorem mollitia, tempore molestias harum ipsam, quam voluptatum, aliquid dolor delectus sit cum corporis?
-        </Text>
+        <P>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquid alias quae molestias at repellat inventore rerum cumque perferendis, animi ullam, autem consequuntur debitis reiciendis voluptatibus ipsam a cum nemo?
+        </P>
 
         <Button
           leftIcon={ <Ionicons name="bag-handle" size={16} color="white" /> }> Hello world!
@@ -73,26 +77,26 @@ export function HomePage() {
         </View>
 
         <View className="flex-row gap-[20px]">
-          <IconButton className="bg-primary w-[50px] h-[50px]" key={key()} onPress={() => {}}>
+          <IconButton className="bg-blue-500 w-[50px] h-[50px]" key={key()} onPress={() => {}}>
             <Ionicons name="bag-handle" size={25} color="white" />
           </IconButton>
-          <IconButton className="bg-primary w-[50px] h-[50px]" key={key()} onPress={() => {}}>
+          <IconButton className="bg-blue-500 w-[50px] h-[50px]" key={key()} onPress={() => {}}>
             <Ionicons name="calculator-outline" size={25} color="white" />
           </IconButton>
-          <IconButton className="bg-primary w-[50px] h-[50px]" key={key()} onPress={() => {}}>
+          <IconButton className="bg-blue-500 w-[50px] h-[50px]" key={key()} onPress={() => {}}>
             <Ionicons name="bug-sharp" size={25} color="white" />
           </IconButton>
-          <IconButton className="bg-primary w-[50px] h-[50px]" key={key()} onPress={() => {}}>
+          <IconButton className="bg-blue-500 w-[50px] h-[50px]" key={key()} onPress={() => {}}>
             <Ionicons name="thumbs-down" size={25} color="white" />
           </IconButton>
         </View>
 
-        <Text>
+        <P>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.
-        </Text>
+        </P>
 
       </View>
     </Scaffold>
