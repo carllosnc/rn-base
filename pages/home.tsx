@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { key } from 'utils/hash'
 import { Button } from 'components/button'
 import { TextField } from 'components/text-field'
-import { useTheme } from 'hooks/color-theme-hook'
+import { useColor, useTheme } from 'hooks/color-theme-hook'
 import { P } from 'components/text'
 import { ListTile } from 'components/list-tile'
 
@@ -37,6 +37,8 @@ function HomeTopBar(){
 }
 
 export function HomePage() {
+  const iconColor = useColor({ light: "black", dark: "white" })
+
   return (
     <Scaffold
       topBar={<HomeTopBar/>}
@@ -49,27 +51,27 @@ export function HomePage() {
 
         <View>
           <ListTile
-            leftContent={ <Ionicons name="star-outline" size={25} color="red" /> }
-            rightContent={ <Ionicons name="chevron-forward" size={20} color="black" /> }
+            leftContent={ <Ionicons name="star-outline" size={25} color={iconColor} /> }
+            rightContent={ <Ionicons name="chevron-forward" size={20} color={iconColor} /> }
             title="Lorem Ipsum is simply dummy"
             subTitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
           />
           <ListTile
-            leftContent={ <Ionicons name="settings-outline" size={25} color="blue" /> }
-            rightContent={ <Ionicons name="chevron-forward" size={20} color="black" /> }
+            leftContent={ <Ionicons name="settings-outline" size={25} color={iconColor} /> }
+            rightContent={ <Ionicons name="chevron-forward" size={20} color={iconColor} /> }
             title="This is my second ListTile"
             subTitle="This is my subtitle"
           />
           <ListTile
-            leftContent={ <Ionicons name="bag-outline" size={25} color="green" /> }
-            rightContent={ <Ionicons name="chevron-forward" size={20} color="black" /> }
+            leftContent={ <Ionicons name="bag-outline" size={25} color={iconColor} /> }
+            rightContent={ <Ionicons name="chevron-forward" size={20} color={iconColor} /> }
             title="This is my second ListTile"
             subTitle="This is my subtitle"
           />
         </View>
 
-        <Button
-          leftIcon={ <Ionicons name="bag-handle" size={16} color="white" /> }> Hello world!
+        <Button leftIcon={ <Ionicons name="bag-handle" size={16} color="white" /> }>
+            Hello world!
         </Button>
 
         <TextField isError label="Label" placeholder="Placeholder" />
@@ -112,13 +114,6 @@ export function HomePage() {
             <Ionicons name="thumbs-down" size={25} color="white" />
           </IconButton>
         </View>
-        <P>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.
-        </P>
-
       </View>
     </Scaffold>
   )
