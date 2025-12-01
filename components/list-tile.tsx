@@ -23,17 +23,17 @@ export function ListTile ({
   ...props
 }: ListTileProps){
   const listTileStyle = clsx(
-    "border-b border-neutral-200 gap-[15px] items-center w-full py-[14px] px-[5px] flex flex-row",
+    "border-b border-neutral-200 dark:border-neutral-600 gap-[15px] items-center w-full py-[14px] px-[5px] flex flex-row",
     listTileClass
   )
 
   const titleStyle = clsx(
-    "font-bold text-[15px]",
+    "font-bold text-[15px] text-black dark:text-white",
     titleClass
   )
 
   const subTitleStyle = clsx(
-    "text-neutral-500 text-[14px]",
+    "text-[14px] text-neutral-500 dark:text-neutral-400",
     subTitleClass
   )
 
