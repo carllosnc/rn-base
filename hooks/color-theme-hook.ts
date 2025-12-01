@@ -15,3 +15,14 @@ export function useTheme(){
     drawerColor
   }
 }
+
+export function useColor({light, dark}: {light: string, dark: string}){
+  let colorScheme = useColorScheme()
+  let color = light
+
+  if(colorScheme === "dark"){
+    color = dark
+  }
+
+  return color
+}
