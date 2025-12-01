@@ -35,12 +35,12 @@ export function TopBar({
   }
 
   const titleClasses = clsx(
-    'truncate text-[16px] font-bold dark:text-white',
+    "truncate text-[16px] font-bold dark:text-white",
     titleClass
   );
 
   const topBarClasses = clsx(
-    `bg-white dark:bg-neutral-800 flex h-[60px] w-full flex-row items-center justify-between px-[12px] pl-[20px]`,
+    "bg-white dark:bg-neutral-800 flex h-[60px] w-full flex-row items-center justify-between px-[12px] pl-[20px]",
     topBarClass
   )
 
