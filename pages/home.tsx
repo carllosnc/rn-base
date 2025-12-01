@@ -8,6 +8,7 @@ import { Button } from 'components/button'
 import { TextField } from 'components/text-field'
 import { useTheme } from 'hooks/color-theme-hook'
 import { P } from 'components/text'
+import { ListTile } from 'components/list-tile'
 
 function HomeTopBar(){
   const { contentColor } = useTheme()
@@ -39,12 +40,33 @@ export function HomePage() {
   return (
     <Scaffold
       topBar={<HomeTopBar/>}
-      className="bg-white dark:bg-neutral-800 w-full h-full"
+      className="bg-white dark:bg-neutral-800 w-full h-full relative"
       >
       <View className="gap-[30px] p-[20px] pb-[80px]">
         <P>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquid alias quae molestias at repellat inventore rerum cumque perferendis, animi ullam, autem consequuntur debitis reiciendis voluptatibus ipsam a cum nemo?
         </P>
+
+        <View>
+          <ListTile
+            leftContent={ <Ionicons name="star-outline" size={25} color="red" /> }
+            rightContent={ <Ionicons name="chevron-forward" size={20} color="black" /> }
+            title="Lorem Ipsum is simply dummy"
+            subTitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          />
+          <ListTile
+            leftContent={ <Ionicons name="settings-outline" size={25} color="blue" /> }
+            rightContent={ <Ionicons name="chevron-forward" size={20} color="black" /> }
+            title="This is my second ListTile"
+            subTitle="This is my subtitle"
+          />
+          <ListTile
+            leftContent={ <Ionicons name="bag-outline" size={25} color="green" /> }
+            rightContent={ <Ionicons name="chevron-forward" size={20} color="black" /> }
+            title="This is my second ListTile"
+            subTitle="This is my subtitle"
+          />
+        </View>
 
         <Button
           leftIcon={ <Ionicons name="bag-handle" size={16} color="white" /> }> Hello world!
@@ -90,7 +112,6 @@ export function HomePage() {
             <Ionicons name="thumbs-down" size={25} color="white" />
           </IconButton>
         </View>
-
         <P>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, quia, error veniam unde sint pariatur nisi numquam aspernatur quisquam natus, sed ex! Assumenda aspernatur adipisci accusamus ex harum nisi.

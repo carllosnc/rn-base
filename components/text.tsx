@@ -2,7 +2,7 @@ import { clsx } from 'clsx'
 import { Text, TextProps } from 'react-native'
 
 interface PProps extends TextProps {
-  children: string
+  children: any
   className?: string
 }
 
