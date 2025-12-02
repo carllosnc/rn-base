@@ -47,7 +47,6 @@ export function TopBar({
   return (
     <View className={topBarClasses}>
       <View className="flex flex-row items-center gap-[10px]">
-
         { drawerButton && (
           <TouchableOpacity
             className='py-[5px]'
