@@ -3,13 +3,38 @@
 > React Native components inspired by Flutter
 
 ## Components
-- Button
-- IconButton
-- Scaffold
-- TextField
-- ListTile
-- TopBar
-- P
+- ✅ Button
+- ✅ IconButton
+- ✅ Scaffold
+- ✅ Dialog
+- ✅ TextField
+- ✅ ListTile
+- ✅ TopBar
+- ✅ P
+- 🔲 Bottom Sheet
+
+**Example:**
+
+```jsx
+function HomeTopBar(){
+  return (
+    <TopBar
+      title="this is another item lets work with that"
+    />
+  )
+}
+
+export function HomePage() {
+  return (
+    <Scaffold
+      topBar={<HomeTopBar/>}
+      className="bg-white dark:bg-neutral-800 w-full h-full relative"
+    >
+      <P> Hello world </P>
+    </Scaffold>
+  )
+}
+```
 
 ---
 
