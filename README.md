@@ -2,7 +2,13 @@
 
 > React Native components inspired by Flutter
 
+## What's inside
+
+- Expo
+- Nativewind
+
 ## Components
+
 - ✅ Button
 - ✅ IconButton
 - ✅ Scaffold
