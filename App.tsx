@@ -3,7 +3,6 @@ import { createStaticNavigation } from '@react-navigation/native'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { HomePage } from 'pages/home'
 import { Drawer } from 'pages/drawer';
-import { View } from 'react-native';
 
 const RootStack = createDrawerNavigator({
   screenOptions: {
@@ -30,14 +29,6 @@ const Navigation = createStaticNavigation(RootStack)
 
 export default function App() {
   return (
-    <View className="w-fit h-full">
-      <Navigation />
-
-      {/* <View className="w-fit flex-1 justify-end h-full bg-black/50 absolute bottom-0 right-0 left-0">
-        <View className="w-fit h-[400px] bg-white p-[20px]">
-          <P> Hello world </P>
-        </View>
-      </View> */}
-    </View>
+    <Navigation />
   )
 }
