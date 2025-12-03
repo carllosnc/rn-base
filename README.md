@@ -19,6 +19,9 @@
 - ✅ P
 - 🔲 Bottom Sheet
 - 🔲 Expander
+- 🔲 Checkbox
+- 🔲 Radio button
+- 🔲 Selects
 
 **Example:**
 

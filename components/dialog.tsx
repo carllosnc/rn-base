@@ -13,7 +13,7 @@ export function Dialog({ target, children, containerClass, contentClass }: Dialo
   const [modalVisible, setModalVisible] = useState(false)
 
   const containerStyle = clsx(
-    "bg-black/70 blur-lg h-full w-fit p-[20px] flex justify-center items-center",
+    "bg-black/60 dark:bg-neutral-400/70 blur-lg h-full w-fit p-[20px] flex justify-center items-center",
     containerClass
   )
 
