@@ -15,7 +15,7 @@ export function BottomSheet(
   const [modalVisible, setModalVisible] = useState(false)
 
   const containerStyle = clsx(
-    "bg-black/60 dark:bg-neutral-400/70 blur-lg h-full w-fit flex justify-end",
+    "bg-black/75 blur-lg h-full w-fit flex justify-end",
     containerClass
   )
 
