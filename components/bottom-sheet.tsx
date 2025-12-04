@@ -27,7 +27,7 @@ export function BottomSheet(
   return (
     <View>
       <Modal
-        animationType="slide"
+        animationType="fade"
         transparent={true}
         visible={modalVisible}
         hardwareAccelerated={true}
