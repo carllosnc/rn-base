@@ -1,10 +1,12 @@
 import './global.css'
 import { createStaticNavigation } from '@react-navigation/native'
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { HomePage } from 'pages/home'
-import { Drawer } from 'pages/drawer';
+// import { Drawer } from 'pages/drawer';
+import { AboutPage } from 'pages/about';
 
-const RootStack = createDrawerNavigator({
+const RootStack = createNativeStackNavigator({
+  initialRouteName: "Home",
   screenOptions: {
     drawerHideStatusBarOnOpen: true,
     drawerStyle: {
@@ -15,13 +17,12 @@ const RootStack = createDrawerNavigator({
     },
     headerShown: false
   },
-  drawerContent(props) {
-    return (<Drawer {...props} />)
-  },
+  // drawerContent(props) {
+  //   return (<Drawer {...props} />)
+  // },
   screens: {
-    Home: {
-      screen: HomePage
-    },
+    Home: { screen: HomePage },
+    About: { screen: AboutPage }
   },
 })
 
