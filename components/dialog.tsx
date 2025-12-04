@@ -18,7 +18,7 @@ export function Dialog({ target, children, containerClass, contentClass }: Dialo
   )
 
   const contentStyle = clsx(
-    "w-full p-[20px] max-w-[360px] gap-[10px] rounded-lg min-h-[150px] max-h-full bg-white dark:bg-neutral-800",
+    "w-full p-[20px] max-w-[360px] gap-[10px] rounded-[20px] min-h-[150px] max-h-full bg-white dark:bg-neutral-800",
     contentClass
   )
 
