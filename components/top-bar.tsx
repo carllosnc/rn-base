@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native';
 import { IconButton } from './icon-buttons';
 import { ReactNode } from 'react';
 import { clsx } from 'clsx';
@@ -12,7 +12,6 @@ type TopBarProps = {
   titleClass?: string
   topBarClass?: string
   backButton?: boolean
-  drawerButton?: boolean
   actions?: ReactNode[]
 };
 
@@ -20,12 +19,11 @@ export function TopBar({
   title,
   titleClass,
   topBarClass,
-  drawerButton = false,
   titleLimitChars = 30,
   backButton = false, actions,
   }: TopBarProps) {
-  const navigation = useNavigation()
   const { contentColor } = useTheme()
+  const navigation = useNavigation()
 
   function getTitle() {
     if (title.length > titleLimitChars) {
@@ -47,18 +45,9 @@ export function TopBar({
   return (
     <View className={topBarClasses}>
       <View className="flex flex-row items-center gap-[10px]">
-        { drawerButton && (
-          <TouchableOpacity
-            className='py-[5px]'
-            activeOpacity={0.7}
-            onPress={() => { (navigation as any).openDrawer() }}>
-            <Ionicons name="menu-outline" size={32} color={contentColor} />
-          </TouchableOpacity>
-        )}
-
         {backButton && (
-          <IconButton>
-            <Ionicons name="chevron-back" size={18} color={contentColor} />
+          <IconButton onPress={() => navigation.goBack()}>
+            <Ionicons name="chevron-back" size={25} color={contentColor} />
           </IconButton>
         )}
 
