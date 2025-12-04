@@ -10,6 +10,7 @@ import { useColor, useTheme } from 'hooks/color-theme-hook'
 import { P } from 'components/p'
 import { ListTile } from 'components/list-tile'
 import { Dialog } from 'components/dialog'
+import { BottomSheet } from 'components/bottom-sheet'
 
 function HomeTopBar(){
   const { contentColor } = useTheme()
@@ -50,18 +51,25 @@ export function HomePage() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquid alias quae molestias at repellat inventore rerum cumque perferendis, animi ullam, autem consequuntur debitis reiciendis voluptatibus ipsam a cum nemo?
         </P>
 
-        <View>
-          <Dialog
-            contentClass="p-[30px]"
-            target={<Button disabled> Open modal </Button>}
-          >
-            <P className="font-bold text-[20px]"> Modal title </P>
+        <Dialog
+          contentClass="p-[30px]"
+          target={<Button disabled> Open modal </Button>}
+        >
+          <P className="font-bold text-[20px]"> Modal title </P>
+          <P className="text-neutral-700">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </P>
+        </Dialog>
 
-            <P className="text-neutral-700">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </P>
-          </Dialog>
-        </View>
+        <BottomSheet
+          contentClass="p-[30px]"
+          target={<Button disabled> Open Bottom Sheet </Button>}
+        >
+          <P className="font-bold text-[20px]"> Modal title </P>
+          <P className="text-neutral-700">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </P>
+        </BottomSheet>
 
         <View>
           <ListTile
