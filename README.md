@@ -46,6 +46,13 @@ export function HomePage() {
 }
 ```
 
+### Resource
+
+- [True sheet](https://sheet.lodev09.com/)
+- [Action sheet](https://rnas.vercel.app/)
+- [Reanimated](https://docs.swmansion.com/react-native-reanimated/)
+- [React Native Skia](https://shopify.github.io/react-native-skia/)
+
 ---
 
 Carlos Costa @ 2025
